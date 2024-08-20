@@ -1,0 +1,263 @@
+/* collor pallete
+6c757d 222(default background) 333(default font)
+fff ccc
+bac964 5c6549
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    min-height: 100vh;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* SECTION HEADER */
+header {
+    width: 100vw;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.bar-buttons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.bar-buttons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-buttons a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* SECTION HEADER HUMBERGUR */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: #fff;
+}
+
+header.transformed {
+    justify-content: flex-start;
+    padding-left: 20px;
+    background-color: transparent;
+}
+
+header.transformed .hamburger {
+    display: flex;
+}
+
+header.transformed #navbar {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: transparent;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+header.transformed #navbar.active {
+    display: flex;
+}
+
+header.transformed .bar-buttons li {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header.transformed .bar-buttons a {
+    color: #fff;
+}
+
+
+/* SECTION HOME */
+.home h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 100px 0 0 0;
+}
+
+.home h2 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 1000;
+    margin: 0 0 10px 0;
+}
+
+.home p {
+    font-size: 1rem;
+    color: #ccc;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.home-to-profile {
+    display: inline-block;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #333;
+    background-color: #bac964;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.home-to-profile:hover {
+    background-color: #5c6549;
+}
+
+/* SECTION PROFILE */
+.profile {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-content {
+    display: flex;
+    width: 100%;
+}
+
+.profile-picture {
+    width: 50%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.profile-text {
+    width: 50%;
+    padding: 20px;
+    overflow-y: auto;
+    color: #cccccc;
+}
+
+/* Class 1: Header in capslock, white color, left-aligned */
+.profile-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Class 2: Bullet item (left-aligned) */
+.profile-tabbed-item {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: left;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.profile-tabbed-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.profile-bullet-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.profile-date {
+    font-size: 1rem;
+    text-align: right;
+}
+
+/* SECTION PROJECTS */
+.projects {
+    background-color: #222;
+}
+
+/* SECTION CONTACTS */
+.contacts {
+    background-color: #bac964;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.contacts h1 {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10px;
+}
+
+.contact-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+}
